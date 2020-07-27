@@ -140,8 +140,7 @@ def website_url(bucket_name):
     website_url = f"http://{bucket_name}.s3-website.{region}.amazonaws.com" 
     logging.info(f"\n\n\nPlease Use this URL to access the website :- {website_url}\n\n.")
     
-    
-    
+        
 if __name__ == '__main__':
     """
     
