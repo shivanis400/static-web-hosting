@@ -7,6 +7,9 @@
   <h3>5:- Once Website content are uploaded, program will throw the output of URL, this URL can be use to access the static website.</h3></br>
     
     
+ <h2> We can also Enable Cloudfront and Route53 on top of our static web site, We can also integrate AWS code commit or any other version control, any continuous integration and build tool. </h2>
+    
+    
     
     
  ![alt text](https://github.com/shivanis400/ProgrammingCPP/blob/master/static-log.JPG?raw=true)</br>
