@@ -29,4 +29,4 @@
          3:- Setup the whole configuration using Cloudformtion template and then using aws s3 cp command to copy the content to
              the s3 Bucket. The template i have uploaded is using AWS cloudformation Macro.
     
-  <h5>5:-  On Sucessfull deployment of our Cloudformation stack using Option 2, we can see the stack output like WebsiteURL, Bucket Name.
+  <h3>5:-  On Sucessfull deployment of our Cloudformation stack using Option 2, we can see the stack output like WebsiteURL, Bucket Name.</h3>
