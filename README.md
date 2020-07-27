@@ -15,7 +15,7 @@
  
 
  
- <h1>We can also launch a static website using AWS cloudformation and other tools</h1>
+ <h1>We can also Deploy a static website using AWS cloudformation and other tools</h1>
  <h2>How Clouformation Template Would Work.</h2>
   <h3>1:- Creates a S3 Bucket. User can pass a bucket name as a parameter. If no bucket name is passed, the default bucket name  "edcast-static-webhost" will be used.
   <h3>2:- This Bucket is having a property WebsiteConfiguration index or default page as 'index.html', which enables static web hosting using this bucket url.
