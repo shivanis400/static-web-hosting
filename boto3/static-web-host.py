@@ -167,5 +167,5 @@ if __name__ == '__main__':
     else:
         logging.info(f"Failed to Create The bucket {bucket_name}, Exiting the execution")
         exit(0)
-        
+      
         
