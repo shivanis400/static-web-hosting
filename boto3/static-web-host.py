@@ -12,13 +12,13 @@ region = "us-east-2"
 
 def create_bucket(bucket_name, region=None):
     """
+    
     Create an S3 bucket in a specified region if region is not passed, default region 
     N.Virginia will be used
    
     :param bucket_name: Bucket name to be created
     :param region: String region to create bucket in
     :return True: If bucket is Created and False: If Bucket is not created
-
     """
 
     try:
@@ -42,10 +42,10 @@ def create_bucket(bucket_name, region=None):
     
 def add_bucket_policy(bucket_name):
     """
+    
     Setting up the bucket policy, if bucket is created successfully.
     
     :param bucket_name : Name of the bucket to apply policies
-   
     """ 
     
     logging.info(f"Creating Policy Document for bucket {bucket_name}.")
@@ -77,10 +77,10 @@ def add_bucket_policy(bucket_name):
         
 def set_static_config(bucket_name):
     """
+    
     Setting This bucket to be used as static web hosting.
     
-    :param bucket_name name of the bucket
-    
+    :param bucket_name name of the bucket 
     """
 
     logging.info("Setting up Website Configuration for s3 bucket.")
@@ -98,10 +98,10 @@ def set_static_config(bucket_name):
     
 def upload_objects(local_directory):
     """
+    
     Upload the content to our s3 bucket, to be used by our Website.
     
-    :param file content path of our local_directory
-    
+    :param file content path of our local_directory  
     """
 
     try:
@@ -132,10 +132,10 @@ def upload_objects(local_directory):
 
 def website_url(bucket_name):
     """
+    
     Post the website URL will be used for Static web hosting.
     
-    :param bucket_name used for static web hosting
-    
+    :param bucket_name used for static web hosting 
     """ 
     website_url = f"http://{bucket_name}.s3-website.{region}.amazonaws.com" 
     logging.info(f"\n\n\nPlease Use this URL to access the website :- {website_url}\n\n.")
@@ -144,6 +144,7 @@ def website_url(bucket_name):
     
 if __name__ == '__main__':
     """
+    
     TODO: 27/07/2020
     Version : 2
     
@@ -151,8 +152,7 @@ if __name__ == '__main__':
     2:- Add Bucket Policies.
     3:- Set up the Website Configuration.
     4:- Upload the Website Content.
-    5:- Output the Static website URL
-    
+    5:- Output the Static website URL.    
     """
     logging.info("Started Main Function Excecution")
     
