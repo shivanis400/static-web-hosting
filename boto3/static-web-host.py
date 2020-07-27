@@ -12,14 +12,12 @@ region = "us-east-2"
 
 def create_bucket(bucket_name, region=None):
     """
-    Create an S3 bucket in a specified region
-    if region is not passed, default region 
+    Create an S3 bucket in a specified region if region is not passed, default region 
     N.Virginia will be used
    
     :param bucket_name: Bucket name to be created
     :param region: String region to create bucket in
-    :return True: If bucket is Created
-            False: If Bucket is not created
+    :return True: If bucket is Created and False: If Bucket is not created
 
     """
 
@@ -31,8 +29,7 @@ def create_bucket(bucket_name, region=None):
         else:
             s3_client = boto3.client('s3', region_name=region)
             location = {'LocationConstraint': region}
-            s3_client.create_bucket(Bucket=bucket_name,
-                                    CreateBucketConfiguration=location)
+            s3_client.create_bucket(Bucket=bucket_name, CreateBucketConfiguration=location)
         logging.info(f"Bucket {bucket_name} Created successfully.")
         
         
@@ -86,7 +83,6 @@ def set_static_config(bucket_name):
     
     """
 
-    # Setting up Index or default page
     logging.info("Setting up Website Configuration for s3 bucket.")
     
     website_configuration = {
@@ -95,8 +91,7 @@ def set_static_config(bucket_name):
 
     # Set the website configuration
     s3 = boto3.client('s3')
-    s3.put_bucket_website(Bucket=bucket_name,
-                          WebsiteConfiguration=website_configuration)
+    s3.put_bucket_website(Bucket=bucket_name, WebsiteConfiguration=website_configuration)
                           
     logging.info("Successfully Applied website configuration.")
     
@@ -162,6 +157,7 @@ if __name__ == '__main__':
     logging.info("Started Main Function Excecution")
     
     status = create_bucket(bucket_name,region)
+    
     if(status == True):
         content_path ="F:\\website" 
         add_bucket_policy(bucket_name)
